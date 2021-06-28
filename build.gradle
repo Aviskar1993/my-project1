@@ -5,7 +5,15 @@ plugins {
 }
 
 plugins {
-  id "org.sonarqube" version "3.1"
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "Aviskar1993_my-project1"
+    property "sonar.organization", "aviskar1993"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 group 'com.example'
