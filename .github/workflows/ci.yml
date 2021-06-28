@@ -18,7 +18,9 @@ jobs:
         with:
           java-version: 11
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+        run: |
+              chmod +x gradlew
+              sudo ufw allow 9000/tcp
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
